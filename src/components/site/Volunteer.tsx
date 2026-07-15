@@ -43,7 +43,7 @@ export function Volunteer() {
               Leave a <span className="italic text-gradient-sunrise">forest</span>.
             </h2>
             <p className="mt-6 text-lg text-white/85 leading-relaxed max-w-lg">
-              We welcome volunteers from Marsabit and across the world — for a day, a season,
+              We welcome volunteers from Marsabit and across the world, for a day, a season,
               or a lifetime of stewardship.
             </p>
             <ul className="mt-8 space-y-3">
