@@ -6,7 +6,7 @@ const milestones = [
   { year: "The Beginning", title: "Ntarakwai CBO is founded", body: "A group of community elders, youth and educators formalised what had long been informal stewardship." },
   { year: "Mobilisation", title: "Communities take the lead", body: "Village committees, schools and women's groups became the backbone of every campaign." },
   { year: "The Nursery", title: "Indigenous seedlings, at scale", body: "We established a tree nursery focused only on native species suited to the mountain's ecology." },
-  { year: "Today", title: "A living, growing forest", body: "Rainy seasons now bring thousands of seedlings into the ground — and measurable change to the land." },
+  { year: "Today", title: "A living, growing forest", body: "Rainy seasons now bring thousands of seedlings into the ground, and measurable change to the land." },
 ];
 
 export function AboutTimeline() {
