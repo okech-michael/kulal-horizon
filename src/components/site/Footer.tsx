@@ -19,7 +19,7 @@ export function Footer() {
               </div>
             </div>
             <p className="mt-6 max-w-md text-white/70 leading-relaxed">
-              Community-based environmental conservation, restoration and climate resilience —
+              Community-based environmental conservation, restoration and climate resilience,
               rooted in the people and ecosystems of Mt. Kulal.
             </p>
 
