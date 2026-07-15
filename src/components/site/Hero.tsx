@@ -24,7 +24,7 @@ export function Hero() {
           fetchPriority="high"
         />
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
-        <div className="absolute inset-0 bg-black/25" />
+        <div className="absolute inset-0 bg-black/45" />
       </motion.div>
 
       {/* Ambient floating orbs */}
@@ -42,7 +42,7 @@ export function Hero() {
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
             className="max-w-4xl"
           >
-            <div className="mb-6 inline-flex items-center gap-3 rounded-full glass-dark px-4 py-2 text-xs font-medium uppercase tracking-[0.22em] text-white/85">
+            <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-white/20 bg-black/35 px-4 py-2 text-xs font-medium uppercase tracking-[0.22em] text-white/95 shadow-lg shadow-black/20 backdrop-blur-sm">
               <span className="h-1.5 w-1.5 rounded-full bg-highlight animate-pulse" />
               Community-led conservation · Mt. Kulal, Kenya
             </div>
@@ -59,7 +59,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
-              className="mt-8 max-w-2xl text-lg md:text-xl leading-relaxed text-white/80"
+              className="mt-8 max-w-2xl text-lg md:text-xl leading-relaxed text-white/95 drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)]"
             >
               For over a decade, Ntarakwai CBO has stood beside the communities of Mt. Kulal,
               nurturing indigenous seedlings, restoring degraded landscapes and building
@@ -103,8 +103,8 @@ export function Hero() {
                 { k: "500+", v: "Volunteers" },
               ].map((s) => (
                 <div key={s.v}>
-                  <div className="font-display text-3xl md:text-4xl text-white">{s.k}</div>
-                  <div className="mt-1 text-xs uppercase tracking-[0.18em] text-white/60">{s.v}</div>
+                  <div className="font-display text-3xl md:text-4xl font-semibold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">{s.k}</div>
+                  <div className="mt-1 text-xs uppercase tracking-[0.18em] text-white/80">{s.v}</div>
                 </div>
               ))}
             </motion.div>
