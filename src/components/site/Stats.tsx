@@ -80,7 +80,7 @@ export function Stats() {
               <div className="font-display text-4xl md:text-5xl font-semibold tracking-tight">
                 <Counter to={s.value} suffix={s.suffix} />
               </div>
-              <div className="mt-4 text-sm text-white/70 leading-snug">{s.label}</div>
+              <div className="mt-4 text-sm text-white/90 leading-snug">{s.label}</div>
             </motion.div>
           ))}
         </div>
