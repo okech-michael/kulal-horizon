@@ -17,7 +17,7 @@ export function Contact() {
               Let's grow <span className="italic text-gradient-forest">something</span> together.
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Whether you want to partner, volunteer or simply learn more about our work — we'd love to hear from you.
+              Whether you want to partner, volunteer or simply learn more about our work, we'd love to hear from you.
             </p>
 
             <div className="mt-10 space-y-5">
