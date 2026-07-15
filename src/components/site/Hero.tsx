@@ -61,7 +61,7 @@ export function Hero() {
               transition={{ duration: 1, delay: 0.3 }}
               className="mt-8 max-w-2xl text-lg md:text-xl leading-relaxed text-white/80"
             >
-              For over a decade, Ntarakwai CBO has stood beside the communities of Mt. Kulal —
+              For over a decade, Ntarakwai CBO has stood beside the communities of Mt. Kulal,
               nurturing indigenous seedlings, restoring degraded landscapes and building
               climate resilience from the ground up.
             </motion.p>

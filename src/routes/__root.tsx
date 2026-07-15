@@ -67,10 +67,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Ntarakwai CBO — Growing Forests, Restoring Mt. Kulal" },
+      { title: "Ntarakwai CBO: Growing Forests, Restoring Mt. Kulal" },
       { name: "description", content: "Ntarakwai CBO grows indigenous seedlings, restores ecosystems and empowers communities around Mt. Kulal, Kenya." },
       { name: "author", content: "Ntarakwai CBO" },
-      { property: "og:title", content: "Ntarakwai CBO — Growing Forests, Restoring Mt. Kulal" },
+      { property: "og:title", content: "Ntarakwai CBO: Growing Forests, Restoring Mt. Kulal" },
       { property: "og:description", content: "Community-led environmental conservation and reforestation around Mt. Kulal, Kenya." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
