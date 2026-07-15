@@ -46,7 +46,8 @@ export function Stats() {
           transition={{ duration: 2, ease: "easeOut" }}
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-primary/70 to-primary" />
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/85 via-primary/85 to-foreground/90" />
+        <div className="absolute inset-0 bg-foreground/25" />
       </div>
 
       <div className="container-editorial text-white">
@@ -79,7 +80,7 @@ export function Stats() {
               <div className="font-display text-4xl md:text-5xl font-semibold tracking-tight">
                 <Counter to={s.value} suffix={s.suffix} />
               </div>
-              <div className="mt-4 text-sm text-white/70 leading-snug">{s.label}</div>
+              <div className="mt-4 text-sm text-white/90 leading-snug">{s.label}</div>
             </motion.div>
           ))}
         </div>
