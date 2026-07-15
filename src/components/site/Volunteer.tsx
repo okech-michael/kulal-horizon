@@ -7,7 +7,7 @@ const reasons = [
   "Plant indigenous seedlings during the rainy seasons",
   "Support community education and school nurseries",
   "Help map and protect water catchments",
-  "Contribute skills — anything from field work to design",
+  "Contribute skills, from field work to design",
 ];
 
 const upcoming = [
