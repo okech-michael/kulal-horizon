@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Trees, School, Droplets, Users, Building2, Leaf } from "lucide-react";
+import heroImg from "@/assets/hero-kulal.jpg";
 
 const markers = [
   { x: 34, y: 42, icon: Trees, label: "Ntarakwai Nursery", note: "Central seedling nursery" },
@@ -58,65 +59,21 @@ export function ConservationMap() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1 }}
-              className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border/50 bg-gradient-to-br from-primary/10 via-secondary to-highlight/10 shadow-elegant"
+              className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border/50 shadow-elegant"
             >
-              {/* Stylised topography */}
-              <svg viewBox="0 0 400 300" className="absolute inset-0 h-full w-full">
-                <defs>
-                  <radialGradient id="peak" cx="50%" cy="35%" r="55%">
-                    <stop offset="0%" stopColor="oklch(0.62 0.14 152)" stopOpacity="0.35" />
-                    <stop offset="100%" stopColor="oklch(0.62 0.14 152)" stopOpacity="0" />
-                  </radialGradient>
-                </defs>
-                <rect width="400" height="300" fill="url(#peak)" />
-                {[...Array(9)].map((_, i) => (
-                  <path
-                    key={i}
-                    d={`M0 ${80 + i * 22} Q 100 ${60 + i * 22} 200 ${75 + i * 22} T 400 ${70 + i * 22}`}
-                    fill="none"
-                    stroke="oklch(0.44 0.10 152)"
-                    strokeOpacity={0.18 - i * 0.012}
-                    strokeWidth="1"
-                  />
-                ))}
-                {/* River */}
-                <path d="M 60 300 Q 120 220 180 200 T 320 120 T 400 40" fill="none" stroke="oklch(0.70 0.10 220)" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" />
-              </svg>
-
-              {/* Markers */}
-              {markers.map((m, i) => (
-                <motion.div
-                  key={m.label}
-                  initial={{ scale: 0, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.3 + i * 0.1, type: "spring" }}
-                  onMouseEnter={() => setActive(i)}
-                  onMouseLeave={() => setActive(null)}
-                  className="absolute -translate-x-1/2 -translate-y-1/2"
-                  style={{ left: `${m.x}%`, top: `${m.y}%` }}
-                >
-                  <div className="relative">
-                    <span className="absolute inset-0 rounded-full bg-primary/40 blur-md animate-pulse" />
-                    <button className={`relative grid h-10 w-10 place-items-center rounded-full transition-all ${active === i ? "bg-highlight text-highlight-foreground scale-125" : "bg-primary text-primary-foreground hover:scale-110"} shadow-lg`}>
-                      <m.icon className="h-4 w-4" />
-                    </button>
-                    {active === i && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 6 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="absolute left-1/2 top-full mt-3 w-56 -translate-x-1/2 rounded-2xl glass p-3 shadow-elegant z-10"
-                      >
-                        <div className="text-sm font-semibold">{m.label}</div>
-                        <div className="mt-0.5 text-xs text-muted-foreground">{m.note}</div>
-                      </motion.div>
-                    )}
-                  </div>
-                </motion.div>
-              ))}
-
-              <div className="absolute bottom-4 right-4 rounded-full glass px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.18em] text-foreground/70">
-                Mt. Kulal · Marsabit County
+              <img
+                src={heroImg}
+                alt="Mt. Kulal landscape restoration"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-white/15 px-4 py-3 backdrop-blur-sm">
+                <div className="text-[10px] font-medium uppercase tracking-[0.18em] text-white/90">
+                  Mt. Kulal · Marsabit County
+                </div>
+                <div className="mt-1 text-sm font-semibold text-white">
+                  A living landscape shaped by restoration and community care.
+                </div>
               </div>
             </motion.div>
           </div>
