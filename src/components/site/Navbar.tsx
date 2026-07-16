@@ -35,21 +35,21 @@ export function Navbar() {
     >
       <div className="container-editorial">
         <div
-          className={`flex items-center justify-between rounded-full px-5 lg:px-8 transition-all duration-500 ${
+          className={`flex items-center justify-between rounded-full border border-primary/20 bg-[#08331f] px-5 lg:px-8 transition-all duration-500 ${
             scrolled
-              ? "glass shadow-[0_10px_40px_-20px_rgba(14,90,58,0.35)] py-3"
-              : "bg-transparent py-4"
+              ? "shadow-[0_10px_40px_-20px_rgba(14,90,58,0.55)] py-3"
+              : "py-4"
           }`}
         >
           <Link to="/" className="flex items-center gap-2.5 group" onClick={() => setOpen(false)}>
-            <span className={`grid h-9 w-9 place-items-center rounded-full transition-colors ${scrolled ? "bg-primary text-primary-foreground" : "bg-white/15 text-white backdrop-blur-md"}`}>
+            <span className="grid h-9 w-9 place-items-center rounded-full bg-highlight text-highlight-foreground transition-colors">
               <Leaf className="h-4 w-4" />
             </span>
             <div className="leading-tight">
-              <div className={`font-display text-lg font-semibold tracking-tight ${scrolled ? "text-foreground" : "text-white"}`}>
+              <div className="font-display text-lg font-semibold tracking-tight text-white">
                 Ntarakwai
               </div>
-              <div className={`text-[10px] font-medium uppercase tracking-[0.18em] ${scrolled ? "text-foreground/90" : "text-white/90"}`}>
+              <div className="text-[10px] font-medium uppercase tracking-[0.18em] text-white/90">
                 CBO · Mt. Kulal
               </div>
             </div>
@@ -60,7 +60,7 @@ export function Navbar() {
               <Link
                 key={l.to}
                 to={l.to}
-                className={`link-underline text-sm font-medium ${scrolled ? "text-foreground/90 hover:text-primary" : "text-white/95 hover:text-white"}`}
+                className="link-underline text-sm font-medium text-white/95 hover:text-highlight"
               >
                 {l.label}
               </Link>
@@ -70,11 +70,7 @@ export function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               to="/donate"
-              className={`rounded-full px-5 py-2.5 text-sm font-medium transition-all ${
-                scrolled
-                  ? "bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_10px_30px_-10px_rgba(14,90,58,0.5)]"
-                  : "bg-white text-primary hover:bg-white/90"
-              }`}
+              className="rounded-full bg-highlight px-5 py-2.5 text-sm font-medium text-highlight-foreground transition-all hover:bg-highlight/90"
             >
               Donate
             </Link>
@@ -82,7 +78,7 @@ export function Navbar() {
 
           <button
             aria-label="Toggle menu"
-            className={`lg:hidden grid h-10 w-10 place-items-center rounded-full ${scrolled ? "bg-primary text-primary-foreground" : "bg-white/15 text-white backdrop-blur-md"}`}
+            className="lg:hidden grid h-10 w-10 place-items-center rounded-full bg-highlight text-highlight-foreground"
             onClick={() => setOpen((v) => !v)}
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -99,14 +95,14 @@ export function Navbar() {
             transition={{ duration: 0.3 }}
             className="lg:hidden container-editorial mt-3"
           >
-            <div className="glass rounded-3xl p-6 shadow-elegant">
+            <div className="rounded-3xl border border-primary/20 bg-[#08331f] p-6 shadow-elegant">
               <div className="flex flex-col gap-1">
                 {links.map((l) => (
                   <Link
                     key={l.to}
                     to={l.to}
                     onClick={() => setOpen(false)}
-                    className="rounded-xl px-4 py-3 text-base font-medium text-foreground/90 hover:bg-secondary hover:text-primary transition-colors"
+                    className="rounded-xl px-4 py-3 text-base font-medium text-white/95 hover:bg-white/10 hover:text-highlight transition-colors"
                   >
                     {l.label}
                   </Link>
@@ -114,7 +110,7 @@ export function Navbar() {
                 <Link
                   to="/donate"
                   onClick={() => setOpen(false)}
-                  className="mt-2 rounded-full bg-primary px-4 py-3 text-center text-base font-medium text-primary-foreground"
+                  className="mt-2 rounded-full bg-highlight px-4 py-3 text-center text-base font-medium text-highlight-foreground"
                 >
                   Donate
                 </Link>
