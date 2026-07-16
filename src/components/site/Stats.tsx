@@ -61,7 +61,7 @@ export function Stats() {
           <div className="mb-5 inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.24em] text-highlight">
             <span className="h-px w-8 bg-highlight" /> Impact in numbers
           </div>
-          <h2 className="font-display text-4xl md:text-6xl font-semibold leading-[1.05]">
+          <h2 className="font-display text-4xl md:text-6xl font-semibold leading-[1.05] text-[#1F2937] drop-shadow-[0_1px_2px_rgba(255,255,255,0.65)]">
             A decade of stewardship, measured one seedling at a time.
           </h2>
         </motion.div>

@@ -47,7 +47,7 @@ export function Hero() {
               Community-led conservation · Mt. Kulal, Kenya
             </div>
 
-            <h1 className="font-display text-[clamp(2.75rem,7vw,6.5rem)] font-semibold leading-[1.02] tracking-tight text-white">
+            <h1 className="font-display text-[clamp(2.45rem,6.2vw,5.8rem)] font-semibold leading-[1.02] tracking-tight text-white">
               Growing Forests. <br />
               <span className="italic font-normal text-white/95">Restoring </span>
               <span className="text-gradient-sunrise italic font-normal">Ecosystems.</span>
