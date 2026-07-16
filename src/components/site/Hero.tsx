@@ -42,14 +42,14 @@ export function Hero() {
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
             className="max-w-4xl"
           >
-            <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-white/20 bg-black/35 px-4 py-2 text-xs font-medium uppercase tracking-[0.22em] text-white/95 shadow-lg shadow-black/20 backdrop-blur-sm">
+            <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-white/20 bg-black/35 px-4 py-2 text-xs font-medium uppercase tracking-[0.22em] text-white shadow-lg shadow-black/20 backdrop-blur-sm">
               <span className="h-1.5 w-1.5 rounded-full bg-highlight animate-pulse" />
               Community-led conservation · Mt. Kulal, Kenya
             </div>
 
             <h1 className="font-display text-[clamp(2.45rem,6.2vw,5.8rem)] font-semibold leading-[1.02] tracking-tight text-white">
               Growing Forests. <br />
-              <span className="italic font-normal text-white/95">Restoring </span>
+              <span className="italic font-normal text-white">Restoring </span>
               <span className="text-gradient-sunrise italic font-normal">Ecosystems.</span>
               <br />
               Protecting Mt. Kulal.
@@ -59,7 +59,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
-              className="mt-8 max-w-2xl text-lg md:text-xl leading-relaxed text-white/95 drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)]"
+              className="mt-8 max-w-2xl text-lg md:text-xl leading-relaxed text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)]"
             >
               For over a decade, Ntarakwai CBO has stood beside the communities of Mt. Kulal,
               nurturing indigenous seedlings, restoring degraded landscapes and building
@@ -104,7 +104,7 @@ export function Hero() {
               ].map((s) => (
                 <div key={s.v}>
                   <div className="font-display text-3xl md:text-4xl font-semibold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">{s.k}</div>
-                  <div className="mt-1 text-xs uppercase tracking-[0.18em] text-white/80">{s.v}</div>
+                  <div className="mt-1 text-xs uppercase tracking-[0.18em] text-white/95">{s.v}</div>
                 </div>
               ))}
             </motion.div>
@@ -115,7 +115,7 @@ export function Hero() {
       {/* Scroll indicator */}
       <motion.div
         style={{ opacity }}
-        className="absolute inset-x-0 bottom-8 z-10 flex flex-col items-center gap-2 text-white/70"
+        className="absolute inset-x-0 bottom-8 z-10 flex flex-col items-center gap-2 text-white/95"
       >
         <span className="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
         <motion.div animate={{ y: [0, 6, 0] }} transition={{ duration: 2, repeat: Infinity }}>

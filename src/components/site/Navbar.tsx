@@ -48,7 +48,7 @@ export function Navbar() {
               <div className={`font-display text-lg font-semibold tracking-tight ${scrolled ? "text-foreground" : "text-white"}`}>
                 Ntarakwai
               </div>
-              <div className={`text-[10px] font-medium uppercase tracking-[0.18em] ${scrolled ? "text-muted-foreground" : "text-white/70"}`}>
+              <div className={`text-[10px] font-medium uppercase tracking-[0.18em] ${scrolled ? "text-foreground/90" : "text-white/90"}`}>
                 CBO · Mt. Kulal
               </div>
             </div>
@@ -59,7 +59,7 @@ export function Navbar() {
               <a
                 key={l.href}
                 href={l.href}
-                className={`link-underline text-sm font-medium ${scrolled ? "text-foreground/80 hover:text-primary" : "text-white/85 hover:text-white"}`}
+                className={`link-underline text-sm font-medium ${scrolled ? "text-foreground/90 hover:text-primary" : "text-white/95 hover:text-white"}`}
               >
                 {l.label}
               </a>
@@ -105,7 +105,7 @@ export function Navbar() {
                     key={l.href}
                     href={l.href}
                     onClick={() => setOpen(false)}
-                    className="rounded-xl px-4 py-3 text-base font-medium text-foreground/85 hover:bg-secondary hover:text-primary transition-colors"
+                    className="rounded-xl px-4 py-3 text-base font-medium text-foreground/90 hover:bg-secondary hover:text-primary transition-colors"
                   >
                     {l.label}
                   </a>

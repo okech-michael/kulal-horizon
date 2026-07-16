@@ -52,7 +52,7 @@ export function Donate() {
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold leading-[1.1] text-white">
               Give a <span className="italic text-gradient-sunrise">seedling</span> a lifetime.
             </h2>
-            <p className="mt-5 text-base md:text-lg text-white/75 leading-relaxed max-w-lg">
+            <p className="mt-5 text-base md:text-lg text-white/95 leading-relaxed max-w-lg drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)]">
               Your gift funds indigenous seedlings, community training and the field work
               that keeps young forests alive through their most vulnerable years.
             </p>
@@ -62,7 +62,7 @@ export function Donate() {
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 glass-dark rounded-2xl p-4">
                 <div className="text-[10px] uppercase tracking-[0.22em] text-highlight">100% transparent</div>
-                <p className="mt-1 text-sm text-white/85">Every contribution is tracked from seedling to standing tree.</p>
+                <p className="mt-1 text-sm text-white/95">Every contribution is tracked from seedling to standing tree.</p>
               </div>
             </div>
           </motion.div>
@@ -74,7 +74,7 @@ export function Donate() {
             <div className="rounded-3xl glass-dark p-5 sm:p-7 md:p-8 border-white/15">
               {/* Amount picker */}
               <div className="mb-6">
-                <div className="text-xs uppercase tracking-[0.2em] text-white/60 mb-3">Choose amount (KES)</div>
+                <div className="text-xs uppercase tracking-[0.2em] text-white/95 font-semibold mb-3">Choose amount (KES)</div>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
                   {amounts.map((a) => (
                     <button
@@ -90,12 +90,12 @@ export function Donate() {
                       <div className="font-display text-lg sm:text-xl font-semibold text-white">
                         {a.v.toLocaleString()}
                       </div>
-                      <div className="mt-0.5 text-[10px] uppercase tracking-[0.16em] text-white/60">{a.label}</div>
+                      <div className="mt-0.5 text-[10px] uppercase tracking-[0.16em] text-white/90">{a.label}</div>
                     </button>
                   ))}
                 </div>
                 <div className="mt-3 flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-4 py-3">
-                  <span className="text-sm text-white/60">KES</span>
+                  <span className="text-sm text-white/90">KES</span>
                   <input
                     type="number"
                     min={1}
@@ -113,7 +113,7 @@ export function Donate() {
                   type="button"
                   onClick={() => setTab("mpesa")}
                   className={`flex items-center justify-center gap-2 rounded-xl px-3 py-2.5 text-sm font-semibold transition-all ${
-                    tab === "mpesa" ? "bg-highlight text-highlight-foreground shadow-lg" : "text-white/75 hover:text-white"
+                    tab === "mpesa" ? "bg-highlight text-highlight-foreground shadow-lg" : "text-white/90 hover:text-white"
                   }`}
                 >
                   <Smartphone className="h-4 w-4" /> M-Pesa
@@ -122,7 +122,7 @@ export function Donate() {
                   type="button"
                   onClick={() => setTab("bank")}
                   className={`flex items-center justify-center gap-2 rounded-xl px-3 py-2.5 text-sm font-semibold transition-all ${
-                    tab === "bank" ? "bg-highlight text-highlight-foreground shadow-lg" : "text-white/75 hover:text-white"
+                    tab === "bank" ? "bg-highlight text-highlight-foreground shadow-lg" : "text-white/90 hover:text-white"
                   }`}
                 >
                   <Building2 className="h-4 w-4" /> Cooperative Bank
@@ -166,7 +166,7 @@ function BankCard() {
         </div>
         <div>
           <div className="font-display text-lg font-semibold text-white">Bank Transfer</div>
-          <p className="text-xs text-white/65">Send directly to our Cooperative Bank account. Use the reference so we can thank you.</p>
+          <p className="text-xs text-white/95">Send directly to our Cooperative Bank account. Use the reference so we can thank you.</p>
         </div>
       </div>
 
@@ -174,14 +174,14 @@ function BankCard() {
         {bankDetails.map((d) => (
           <li key={d.label} className="flex items-center justify-between gap-3 px-4 py-3">
             <div className="min-w-0">
-              <div className="text-[10px] uppercase tracking-[0.2em] text-white/50">{d.label}</div>
+              <div className="text-[10px] uppercase tracking-[0.2em] text-white/90">{d.label}</div>
               <div className="mt-0.5 truncate text-sm font-medium text-white">{d.value}</div>
             </div>
             <button
               type="button"
               onClick={() => onCopy(d.label, d.value)}
               aria-label={`Copy ${d.label}`}
-              className="shrink-0 inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/5 px-2.5 py-1.5 text-xs text-white/85 hover:bg-white/10 transition"
+              className="shrink-0 inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/5 px-2.5 py-1.5 text-xs text-white/95 hover:bg-white/10 transition"
             >
               {copied === d.label ? <><Check className="h-3.5 w-3.5 text-highlight" /> Copied</> : <><Copy className="h-3.5 w-3.5" /> Copy</>}
             </button>
@@ -189,7 +189,7 @@ function BankCard() {
         ))}
       </ul>
 
-      <p className="mt-4 text-xs text-white/60 leading-relaxed">
+      <p className="mt-4 text-xs text-white/95 leading-relaxed">
         After sending, email a copy of your slip to <span className="text-white">giving@ntarakwai.org</span> so we can send you a receipt and update on the trees your gift plants.
       </p>
     </div>
@@ -247,12 +247,12 @@ function MpesaForm({ amount }: { amount: number }) {
         </div>
         <div>
           <div className="font-display text-lg font-semibold text-white">M-Pesa STK Push</div>
-          <p className="text-xs text-white/65">Enter your Safaricom number and we'll send a prompt to your phone.</p>
+          <p className="text-xs text-white/90">Enter your Safaricom number and we'll send a prompt to your phone.</p>
         </div>
       </div>
 
       <label className="block">
-        <span className="block text-[10px] uppercase tracking-[0.2em] text-white/60 mb-2">Phone number</span>
+        <span className="block text-[10px] uppercase tracking-[0.2em] text-white/90 font-semibold mb-2">Phone number</span>
         <input
           type="tel"
           inputMode="tel"
@@ -260,13 +260,13 @@ function MpesaForm({ amount }: { amount: number }) {
           placeholder="0712 345 678"
           value={phone}
           onChange={(e) => { setPhone(e.target.value); if (status === "error") setStatus("idle"); }}
-          className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 outline-none focus:border-highlight focus:ring-4 focus:ring-highlight/20 transition"
+          className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/70 outline-none focus:border-highlight focus:ring-4 focus:ring-highlight/20 transition"
           required
         />
       </label>
 
       <div className="mt-4 flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-3">
-        <span className="text-xs uppercase tracking-[0.18em] text-white/60">You give</span>
+        <span className="text-xs uppercase tracking-[0.18em] text-white/90">You give</span>
         <span className="font-display text-xl font-semibold text-white">KES {amount.toLocaleString()}</span>
       </div>
 

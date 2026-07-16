@@ -74,7 +74,7 @@ export function Gallery() {
               <img src={it.src} alt={it.alt} loading="lazy" className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-70" />
               <div className="absolute inset-x-0 bottom-0 p-4 text-left text-white translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                <div className="text-[10px] uppercase tracking-[0.22em] text-white/70">{it.cat}</div>
+                <div className="text-[10px] uppercase tracking-[0.22em] text-white/95">{it.cat}</div>
                 <div className="mt-1 font-display text-lg leading-tight">{it.alt}</div>
               </div>
             </motion.button>
