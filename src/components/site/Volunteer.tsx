@@ -23,7 +23,8 @@ export function Volunteer() {
     <section id="volunteer" className="relative py-28 md:py-40 overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <img src={communityImg} alt="" aria-hidden width={1600} height={1200} loading="lazy" className="h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/50" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,14,9,0.96)_0%,rgba(7,34,18,0.82)_55%,rgba(11,58,30,0.58)_100%)]" />
+        <div className="absolute inset-0 bg-black/12" />
       </div>
 
       <div className="container-editorial">
@@ -33,22 +34,22 @@ export function Volunteer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-6 text-white"
+            className="relative z-20 lg:col-span-6 text-white"
           >
             <div className="mb-5 inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.24em] text-highlight">
               <span className="h-px w-8 bg-highlight" /> Volunteer with us
             </div>
-            <h2 className="font-display text-4xl md:text-6xl font-semibold leading-[1.05]">
+            <h2 className="font-display text-4xl md:text-6xl font-semibold leading-[1.05] text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.75)]">
               Bring your <span className="italic">hands</span>.
               Leave a <span className="italic text-gradient-sunrise">forest</span>.
             </h2>
-            <p className="mt-6 text-lg text-white leading-relaxed max-w-lg drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]">
+            <p className="mt-6 text-lg text-white/95 leading-relaxed max-w-lg drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
               We welcome volunteers from Marsabit and across the world, for a day, a season,
               or a lifetime of stewardship.
             </p>
             <ul className="mt-8 space-y-3">
               {reasons.map((r) => (
-                <li key={r} className="flex items-start gap-3 text-white leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)]">
+                <li key={r} className="flex items-start gap-3 text-white/95 leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)]">
                   <span className="mt-1 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-highlight/25 text-highlight">
                     <Check className="h-3 w-3" />
                   </span>
@@ -58,7 +59,7 @@ export function Volunteer() {
             </ul>
 
             <div className="mt-10">
-              <div className="text-xs uppercase tracking-[0.22em] text-white font-semibold mb-4 drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]">Upcoming activities</div>
+              <div className="text-xs uppercase tracking-[0.22em] text-white font-semibold mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">Upcoming activities</div>
               <div className="space-y-2">
                 {upcoming.map((u) => (
                   <div key={u.title} className="flex items-center gap-4 rounded-2xl glass-dark p-4">
@@ -66,7 +67,7 @@ export function Volunteer() {
                       {u.date}
                     </div>
                     <div className="min-w-0">
-                      <div className="font-semibold text-white">{u.title}</div>
+                      <div className="font-semibold text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">{u.title}</div>
                       <div className="mt-0.5 flex items-center gap-1.5 text-xs text-white/95">
                         <MapPin className="h-3 w-3" /> {u.place}
                       </div>
@@ -84,7 +85,7 @@ export function Volunteer() {
             transition={{ duration: 0.8, delay: 0.15 }}
             className="lg:col-span-6"
           >
-            <div className="rounded-3xl glass p-8 md:p-10 shadow-elegant">
+            <div className="rounded-3xl border border-white/25 bg-background/95 p-8 md:p-10 shadow-[0_20px_60px_-20px_rgba(3,14,9,0.6)] backdrop-blur-xl">
               {!submitted ? (
                 <form
                   onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
@@ -92,7 +93,7 @@ export function Volunteer() {
                 >
                   <div>
                     <h3 className="font-display text-2xl font-semibold">Register as a volunteer</h3>
-                    <p className="mt-1 text-sm text-foreground/90">Tell us a little about yourself and we'll be in touch.</p>
+                    <p className="mt-1 text-sm text-foreground/95">Tell us a little about yourself and we'll be in touch.</p>
                   </div>
                   <div className="grid gap-4 sm:grid-cols-2">
                     <Field label="Full name" name="name" placeholder="Your name" required />
@@ -101,8 +102,8 @@ export function Volunteer() {
                     <Field label="Location" name="location" placeholder="City or village" />
                   </div>
                   <div>
-                    <label className="block text-xs font-medium uppercase tracking-[0.18em] text-foreground/90 mb-2">How would you like to help?</label>
-                    <textarea rows={4} placeholder="Skills, availability, or activities you'd like to join…" className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition" />
+                    <label className="block text-xs font-medium uppercase tracking-[0.18em] text-foreground/95 mb-2">How would you like to help?</label>
+                    <textarea rows={4} placeholder="Skills, availability, or activities you'd like to join…" className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition" />
                   </div>
                   <button type="submit" className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 text-sm font-semibold text-primary-foreground hover:shadow-[0_18px_40px_-12px_rgba(14,90,58,0.6)] transition-shadow">
                     <Users className="h-4 w-4" /> Submit registration
@@ -112,7 +113,7 @@ export function Volunteer() {
                 <div className="py-6 text-center">
                   <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-accent/15 text-accent"><Check className="h-7 w-7" /></div>
                   <h3 className="mt-6 font-display text-2xl font-semibold">Karibu! Welcome to the team.</h3>
-                  <p className="mt-2 text-sm text-foreground/90 max-w-sm mx-auto">We've received your registration. A programme coordinator will reach out shortly.</p>
+                  <p className="mt-2 text-sm text-foreground/95 max-w-sm mx-auto">We've received your registration. A programme coordinator will reach out shortly.</p>
                 </div>
               )}
             </div>
@@ -126,8 +127,8 @@ export function Volunteer() {
 function Field({ label, ...props }: { label: string } & React.InputHTMLAttributes<HTMLInputElement>) {
   return (
     <label className="block">
-      <span className="block text-xs font-medium uppercase tracking-[0.18em] text-foreground/90 mb-2">{label}</span>
-      <input {...props} className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition" />
+      <span className="block text-xs font-medium uppercase tracking-[0.18em] text-foreground/95 mb-2">{label}</span>
+      <input {...props} className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition" />
     </label>
   );
 }
