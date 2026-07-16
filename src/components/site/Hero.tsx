@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, ChevronDown, Play } from "lucide-react";
@@ -72,22 +73,22 @@ export function Hero() {
               transition={{ duration: 1, delay: 0.5 }}
               className="mt-12 flex flex-wrap items-center gap-4"
             >
-              <a
-                href="#impact"
+              <Link
+                to="/impact"
                 className="group relative inline-flex items-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-semibold text-primary shadow-[0_20px_50px_-15px_rgba(0,0,0,0.5)] transition-all hover:-translate-y-0.5 hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.6)]"
               >
                 Explore Our Impact
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
-              <a
-                href="#volunteer"
+              </Link>
+              <Link
+                to="/volunteer"
                 className="group inline-flex items-center gap-3 rounded-full glass-dark px-7 py-4 text-sm font-semibold text-white hover:bg-white/15 transition-colors"
               >
                 <span className="grid h-6 w-6 place-items-center rounded-full bg-highlight text-highlight-foreground">
                   <Play className="h-3 w-3 fill-current" />
                 </span>
                 Partner With Us
-              </a>
+              </Link>
             </motion.div>
 
             {/* Micro stats strip */}

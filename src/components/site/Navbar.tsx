@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Leaf } from "lucide-react";
 
 const links = [
-  { href: "#top", label: "Home" },
-  { href: "#mission", label: "Mission" },
-  { href: "#impact", label: "Impact" },
-  { href: "#projects", label: "Projects" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#volunteer", label: "Volunteer" },
-  { href: "#contact", label: "Contact" },
+  { to: "/", label: "Home" },
+  { to: "/mission", label: "Mission" },
+  { to: "/impact", label: "Impact" },
+  { to: "/projects", label: "Projects" },
+  { to: "/gallery", label: "Gallery" },
+  { to: "/volunteer", label: "Volunteer" },
+  { to: "/contact", label: "Contact" },
 ];
 
 export function Navbar() {
@@ -40,7 +41,7 @@ export function Navbar() {
               : "bg-transparent py-4"
           }`}
         >
-          <a href="#top" className="flex items-center gap-2.5 group">
+          <Link to="/" className="flex items-center gap-2.5 group" onClick={() => setOpen(false)}>
             <span className={`grid h-9 w-9 place-items-center rounded-full transition-colors ${scrolled ? "bg-primary text-primary-foreground" : "bg-white/15 text-white backdrop-blur-md"}`}>
               <Leaf className="h-4 w-4" />
             </span>
@@ -52,23 +53,23 @@ export function Navbar() {
                 CBO · Mt. Kulal
               </div>
             </div>
-          </a>
+          </Link>
 
           <nav className="hidden lg:flex items-center gap-8">
             {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
+              <Link
+                key={l.to}
+                to={l.to}
                 className={`link-underline text-sm font-medium ${scrolled ? "text-foreground/90 hover:text-primary" : "text-white/95 hover:text-white"}`}
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
           <div className="hidden lg:flex items-center gap-3">
-            <a
-              href="#donate"
+            <Link
+              to="/donate"
               className={`rounded-full px-5 py-2.5 text-sm font-medium transition-all ${
                 scrolled
                   ? "bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_10px_30px_-10px_rgba(14,90,58,0.5)]"
@@ -76,7 +77,7 @@ export function Navbar() {
               }`}
             >
               Donate
-            </a>
+            </Link>
           </div>
 
           <button
@@ -101,22 +102,22 @@ export function Navbar() {
             <div className="glass rounded-3xl p-6 shadow-elegant">
               <div className="flex flex-col gap-1">
                 {links.map((l) => (
-                  <a
-                    key={l.href}
-                    href={l.href}
+                  <Link
+                    key={l.to}
+                    to={l.to}
                     onClick={() => setOpen(false)}
                     className="rounded-xl px-4 py-3 text-base font-medium text-foreground/90 hover:bg-secondary hover:text-primary transition-colors"
                   >
                     {l.label}
-                  </a>
+                  </Link>
                 ))}
-                <a
-                  href="#donate"
+                <Link
+                  to="/donate"
                   onClick={() => setOpen(false)}
                   className="mt-2 rounded-full bg-primary px-4 py-3 text-center text-base font-medium text-primary-foreground"
                 >
                   Donate
-                </a>
+                </Link>
               </div>
             </div>
           </motion.div>
