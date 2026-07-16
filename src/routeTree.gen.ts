@@ -10,11 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DonateRouteImport } from './routes/donate'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as ImpactRouteImport } from './routes/impact'
+import { Route as MissionRouteImport } from './routes/mission'
+import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as VolunteerRouteImport } from './routes/volunteer'
 import { Route as ApiPublicMpesaStkRouteImport } from './routes/api/public/mpesa-stk'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DonateRoute = DonateRouteImport.update({
+  id: '/donate',
+  path: '/donate',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpactRoute = ImpactRouteImport.update({
+  id: '/impact',
+  path: '/impact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MissionRoute = MissionRouteImport.update({
+  id: '/mission',
+  path: '/mission',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VolunteerRoute = VolunteerRouteImport.update({
+  id: '/volunteer',
+  path: '/volunteer',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiPublicMpesaStkRoute = ApiPublicMpesaStkRouteImport.update({
@@ -25,27 +67,55 @@ const ApiPublicMpesaStkRoute = ApiPublicMpesaStkRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/donate': typeof DonateRoute
+  '/gallery': typeof GalleryRoute
+  '/impact': typeof ImpactRoute
+  '/mission': typeof MissionRoute
+  '/projects': typeof ProjectsRoute
+  '/volunteer': typeof VolunteerRoute
   '/api/public/mpesa-stk': typeof ApiPublicMpesaStkRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/donate': typeof DonateRoute
+  '/gallery': typeof GalleryRoute
+  '/impact': typeof ImpactRoute
+  '/mission': typeof MissionRoute
+  '/projects': typeof ProjectsRoute
+  '/volunteer': typeof VolunteerRoute
   '/api/public/mpesa-stk': typeof ApiPublicMpesaStkRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/donate': typeof DonateRoute
+  '/gallery': typeof GalleryRoute
+  '/impact': typeof ImpactRoute
+  '/mission': typeof MissionRoute
+  '/projects': typeof ProjectsRoute
+  '/volunteer': typeof VolunteerRoute
   '/api/public/mpesa-stk': typeof ApiPublicMpesaStkRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/api/public/mpesa-stk'
+  fullPaths: '/' | '/contact' | '/donate' | '/gallery' | '/impact' | '/mission' | '/projects' | '/volunteer' | '/api/public/mpesa-stk'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/api/public/mpesa-stk'
-  id: '__root__' | '/' | '/api/public/mpesa-stk'
+  to: '/' | '/contact' | '/donate' | '/gallery' | '/impact' | '/mission' | '/projects' | '/volunteer' | '/api/public/mpesa-stk'
+  id: '__root__' | '/' | '/contact' | '/donate' | '/gallery' | '/impact' | '/mission' | '/projects' | '/volunteer' | '/api/public/mpesa-stk'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactRoute: typeof ContactRoute
+  DonateRoute: typeof DonateRoute
+  GalleryRoute: typeof GalleryRoute
+  ImpactRoute: typeof ImpactRoute
+  MissionRoute: typeof MissionRoute
+  ProjectsRoute: typeof ProjectsRoute
+  VolunteerRoute: typeof VolunteerRoute
   ApiPublicMpesaStkRoute: typeof ApiPublicMpesaStkRoute
 }
 
@@ -56,6 +126,55 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/donate': {
+      id: '/donate'
+      path: '/donate'
+      fullPath: '/donate'
+      preLoaderRoute: typeof DonateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impact': {
+      id: '/impact'
+      path: '/impact'
+      fullPath: '/impact'
+      preLoaderRoute: typeof ImpactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mission': {
+      id: '/mission'
+      path: '/mission'
+      fullPath: '/mission'
+      preLoaderRoute: typeof MissionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/volunteer': {
+      id: '/volunteer'
+      path: '/volunteer'
+      fullPath: '/volunteer'
+      preLoaderRoute: typeof VolunteerRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/mpesa-stk': {
@@ -70,6 +189,13 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactRoute: ContactRoute,
+  DonateRoute: DonateRoute,
+  GalleryRoute: GalleryRoute,
+  ImpactRoute: ImpactRoute,
+  MissionRoute: MissionRoute,
+  ProjectsRoute: ProjectsRoute,
+  VolunteerRoute: VolunteerRoute,
   ApiPublicMpesaStkRoute: ApiPublicMpesaStkRoute,
 }
 export const routeTree = rootRouteImport
