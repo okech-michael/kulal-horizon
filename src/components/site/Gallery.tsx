@@ -10,13 +10,13 @@ import seedlingImg from "@/assets/seedling.jpg";
 import heroImg from "@/assets/hero-kulal.jpg";
 
 const items = [
-  { src: heroImg, alt: "Mt. Kulal at sunrise", cat: "Landscape", span: "md:col-span-2 md:row-span-2" },
-  { src: plantingImg, alt: "Community planting seedlings", cat: "Community", span: "" },
-  { src: nurseryImg, alt: "Indigenous tree nursery", cat: "Nursery", span: "" },
-  { src: seedlingImg, alt: "A seedling held in cupped hands", cat: "Nursery", span: "md:row-span-2" },
-  { src: communityImg, alt: "Schoolchildren with seedlings", cat: "Community", span: "" },
-  { src: restorationImg, alt: "Aerial view of restoration zone", cat: "Restoration", span: "md:col-span-2" },
-  { src: forestMist, alt: "Forest canopy in morning mist", cat: "Landscape", span: "" },
+  { src: heroImg, alt: "Mt. Kulal at sunrise", desc: "The mountain’s early light frames the restoration work underway across the slope.", cat: "Landscape", span: "md:col-span-2 md:row-span-2" },
+  { src: plantingImg, alt: "Community planting seedlings", desc: "Residents and volunteers plant new seedlings to rebuild the forest edge.", cat: "Community", span: "" },
+  { src: nurseryImg, alt: "Indigenous tree nursery", desc: "A local nursery prepares native species for the next planting season.", cat: "Nursery", span: "" },
+  { src: seedlingImg, alt: "A seedling held in cupped hands", desc: "Each young tree represents a long-term promise for the mountain and its people.", cat: "Nursery", span: "md:row-span-2" },
+  { src: communityImg, alt: "Schoolchildren with seedlings", desc: "Young learners join conservation activities and help carry the message home.", cat: "Community", span: "" },
+  { src: restorationImg, alt: "Aerial view of restoration zone", desc: "The restored zone shows how targeted care can revive a once-barren slope.", cat: "Restoration", span: "md:col-span-2" },
+  { src: forestMist, alt: "Forest canopy in morning mist", desc: "Morning mist settles over the canopy as the landscape continues to recover.", cat: "Landscape", span: "" },
 ];
 
 const cats = ["All", "Landscape", "Nursery", "Community", "Restoration"];
@@ -72,10 +72,11 @@ export function Gallery() {
               className={`group relative overflow-hidden rounded-2xl ${it.span}`}
             >
               <img src={it.src} alt={it.alt} loading="lazy" className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-70" />
-              <div className="absolute inset-x-0 bottom-0 p-4 text-left text-white translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-black/0 opacity-80" />
+              <div className="absolute inset-x-0 bottom-0 p-4 text-left text-white">
                 <div className="text-[10px] uppercase tracking-[0.22em] text-white/95">{it.cat}</div>
                 <div className="mt-1 font-display text-lg leading-tight">{it.alt}</div>
+                <div className="mt-2 max-w-[95%] text-sm leading-6 text-white/85">{it.desc}</div>
               </div>
             </motion.button>
           ))}
