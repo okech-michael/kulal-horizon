@@ -45,7 +45,7 @@ export function Navbar() {
             <img
               src="/favicon.png"
               alt="Ntarakwai CBO logo"
-              className="h-9 w-9 rounded-full border border-white/20 object-cover shadow-sm"
+              className="h-11 w-11 rounded-full border border-white/20 object-cover shadow-sm sm:h-12 sm:w-12"
             />
             <div className="leading-tight">
               <div className="font-display text-lg font-semibold tracking-tight text-white">
