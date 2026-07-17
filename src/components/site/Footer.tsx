@@ -13,7 +13,7 @@ export function Footer() {
               <img
                 src="/favicon.png"
                 alt="Ntarakwai CBO logo"
-                className="h-12 w-12 rounded-full border border-white/20 object-cover shadow-sm"
+                className="h-10 w-10 rounded-full border border-white/20 object-cover shadow-sm"
               />
               <div>
                 <div className="font-display text-xl font-semibold text-white">Ntarakwai CBO</div>
