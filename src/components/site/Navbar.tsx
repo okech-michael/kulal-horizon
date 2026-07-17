@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logoImage from "../../assets/The-cbo-logo.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -44,7 +43,7 @@ export function Navbar() {
         >
           <Link to="/" className="flex items-center gap-2.5 group" onClick={() => setOpen(false)}>
             <img
-              src={logoImage}
+              src="/favicon.png"
               alt="Ntarakwai CBO logo"
               className="h-9 w-9 rounded-full border border-white/20 object-cover shadow-sm"
             />
