@@ -1,5 +1,3 @@
-import { Leaf } from "lucide-react";
-
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#0b1a12] text-white">
@@ -11,8 +9,12 @@ export function Footer() {
       <div className="container-editorial relative py-20">
         <div className="grid gap-14 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <div className="flex items-center gap-2.5">
-              <span className="grid h-10 w-10 place-items-center rounded-full bg-primary"><Leaf className="h-4 w-4" /></span>
+            <div className="flex items-center gap-3">
+              <img
+                src="/favicon.png"
+                alt="Ntarakwai CBO logo"
+                className="h-12 w-12 rounded-full border border-white/20 object-cover shadow-sm"
+              />
               <div>
                 <div className="font-display text-xl font-semibold text-white">Ntarakwai CBO</div>
                 <div className="text-[10px] uppercase tracking-[0.22em] text-white/90 font-semibold">Mt. Kulal · Kenya</div>

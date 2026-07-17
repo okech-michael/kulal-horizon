@@ -24,7 +24,7 @@ export function Contact() {
               {[
                 { icon: MapPin, label: "Office", value: "Gatab, Mt. Kulal · Marsabit County, Kenya" },
                 { icon: Mail, label: "Email", value: "hello@ntarakwai.org" },
-                { icon: Phone, label: "Phone", value: "+254 (0) 700 000 000" },
+                { icon: Phone, label: "Phone", value: "0711 856795" },
                 { icon: Clock, label: "Hours", value: "Mon – Fri · 08:00 – 17:00 EAT" },
               ].map((c) => (
                 <div key={c.label} className="flex items-start gap-4">

@@ -42,11 +42,6 @@ export function Navbar() {
           }`}
         >
           <Link to="/" className="flex items-center gap-2.5 group" onClick={() => setOpen(false)}>
-            <img
-              src="/favicon.png"
-              alt="Ntarakwai CBO logo"
-              className="h-11 w-11 rounded-full border border-white/20 object-cover shadow-sm sm:h-12 sm:w-12"
-            />
             <div className="leading-tight">
               <div className="font-display text-lg font-semibold tracking-tight text-white">
                 Ntarakwai
