@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logoImage from "../../assets/The-cbo-logo.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -42,9 +43,11 @@ export function Navbar() {
           }`}
         >
           <Link to="/" className="flex items-center gap-2.5 group" onClick={() => setOpen(false)}>
-            <span className="grid h-9 w-9 place-items-center rounded-full bg-highlight text-highlight-foreground transition-colors">
-              <Leaf className="h-4 w-4" />
-            </span>
+            <img
+              src={logoImage}
+              alt="Ntarakwai CBO logo"
+              className="h-9 w-9 rounded-full border border-white/20 object-cover shadow-sm"
+            />
             <div className="leading-tight">
               <div className="font-display text-lg font-semibold tracking-tight text-white">
                 Ntarakwai
